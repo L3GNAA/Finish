@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Charter – Entry-Level IT Portfolio</title>
+  <meta name="description" content="Project charter, schedule, deliverables, budget and visuals for an entry‑level IT portfolio project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --card: #0f141b;
+      --muted:#8aa0b2;
+      --text:#eaf2f8;
+      --accent:#66d9e8;
+      --ring: rgba(102,217,232,0.35);
+      --border:#1e2937;
+      --shadow: 0 8px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,#081019, #0b0f14 30%, #0b0f14);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header.site{position:sticky;top:0;backdrop-filter:saturate(140%) blur(10px);background:rgba(11,15,20,.7);border-bottom:1px solid var(--border);z-index:50}
+    .bar{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 24px}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px var(--ring)}
+    nav a{padding:8px 12px;border-radius:10px;color:var(--text)}
+    nav a:hover, nav a[aria-current="page"]{background:rgba(255,255,255,.04)}
+    .hero{padding:48px 24px}
+    .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0 0 10px;font-weight:800;letter-spacing:-0.02em}
+    .hero p{margin:0;color:var(--muted);max-width:800px}
+    .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:12px;background:rgba(255,255,255,.02)}
+    .section{padding:10px 24px 36px;border-top:1px solid var(--border)}
+    .section h2{font-size:22px;margin:10px 0 12px}
+    .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0}
+    .kpi .stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;text-align:center}
+    .stat .n{font-size:28px;font-weight:700}
+    .gallery{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    figure{margin:0}
+    figure img{width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+    figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+    .foot{text-align:center;color:var(--muted);padding:24px}
+    /* small extras */
+    .notice{border-left:3px solid var(--accent);padding:10px 12px;background:rgba(102,217,232,.06);border-radius:10px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+    .chip{font-size:12px;border:1px dashed var(--border);padding:6px 10px;border-radius:999px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+  </style>
+</head>
+<body>
+<header class="site">
+  <div class="bar wrap">
+    <div class="logo">
+      <span class="dot" aria-hidden="true"></span>
+      <strong>Project Charter</strong>
+    </div>
+    <nav>
+      <a href="#overview" aria-current="page">Overview</a>
+      <a href="#deliverables">Deliverables</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#visuals">Visuals</a>
+      <a href="#budget">Budget</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero wrap" id="overview">
+  <span class="pill">Entry‑Level IT Portfolio · Hybrid Methodology</span>
+  <h1>Mission: build and showcase a job‑ready tech portfolio</h1>
+  <p>Goal: secure an entry‑level IT position by creating a public portfolio, refining LinkedIn and networking, tracking applications, and validating skills with a certification.</p>
+  <div class="chips" aria-label="Milestones">
+    <span class="chip">Repo setup</span>
+    <span class="chip">AI builder selection</span>
+    <span class="chip">Portfolio design</span>
+    <span class="chip">10+ job applications</span>
+    <span class="chip">Certification</span>
+  </div>
+</section>
+
+<section class="section wrap" id="deliverables">
+  <h2>Key Deliverables</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1) Portfolio Setup</h3>
+      <p>Plan schedule and milestones, set up GitHub repository, pick an AI builder tool, and design the portfolio.</p>
+    </div>
+    <div class="card">
+      <h3>2) LinkedIn & Networking</h3>
+      <p>Update headline and profile, add portfolio link, connect with professionals, and engage with relevant groups.</p>
+    </div>
+    <div class="card">
+      <h3>3) Job Application Tracker</h3>
+      <p>Stand up a tracker, submit 10+ targeted applications, and log responses with timely follow‑ups.</p>
+    </div>
+    <div class="card">
+      <h3>4) Certification / Skills Validation</h3>
+      <p>Choose a certification path, study and practice, then take the exam or complete a skills course.</p>
+    </div>
+  </div>
+  <div class="notice" style="margin-top:16px">Methodology: <strong>Hybrid</strong> — predictive planning for setup; adaptive cycle for apply → get feedback → adjust.</div>
+</section>
+
+<section class="section wrap" id="schedule">
+  <h2>Schedule & Progress</h2>
+  <div class="kpi">
+    <div class="stat"><div class="n">14</div><div class="t">Tasks remaining</div></div>
+    <div class="stat"><div class="n">4</div><div class="t">In progress</div></div>
+    <div class="stat"><div class="n">0</div><div class="t">Late</div></div>
+  </div>
+  <p class="muted">View the charts and weekly schedule in the visuals below.</p>
+</section>
+
+<section class="section wrap" id="visuals">
+  <h2>Visuals</h2>
+  <div class="gallery">
+    <figure>
+      <img src="assets/img/board.JPG" alt="Planner board showing buckets and tasks">
+      <figcaption>Planner board</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/grid.JPG" alt="Planner grid list of tasks with dates, progress and labels">
+      <figcaption>Task grid</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/charts.JPG" alt="Charts with task status, buckets and priorities">
+      <figcaption>Status charts</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/shedule.JPG" alt="Weekly schedule timeline of tasks">
+      <figcaption>Weekly schedule</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/diagram.JPG" alt="Process flow diagram: define, set goal, plan, adaptive cycle, monitor, end goal">
+      <figcaption>Process flow</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/legitdeliverables.JPG" alt="Work breakdown structure of deliverables and dependencies">
+      <figcaption>Deliverables WBS</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/budgetestimation.JPG" alt="Budget estimation worksheet with categories and notes">
+      <figcaption>Budget estimation</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/img/square.JPG" alt="Power-Interest grid of stakeholders">
+      <figcaption>Power–Interest grid</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section wrap" id="budget">
+  <h2>Budget Overview</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Direct Costs</h3>
+      <p>Hosting (GitHub Pages), domain registration, design tools, stock media, and AI builder credits. Student tiers and free plans keep costs minimal.</p>
+    </div>
+    <div class="card">
+      <h3>Contingency</h3>
+      <p>Reserve set at 20% to cover unexpected items (e.g., premium APIs or additional assets).</p>
+    </div>
+    <div class="card">
+      <h3>Notes</h3>
+      <p>Security audit and consulting services are optional at this stage; add as needed for portfolio scale-up.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <p>© 2025 Project Charter · Built for coursework demonstration</p>
+  <p><a class="btn" href="#top">Back to top</a></p>
+</footer>
+
+</body>
+</html>
