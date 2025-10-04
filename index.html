@@ -17,11 +17,47 @@
             color: #1a1a1a;
             line-height: 1.8;
             padding: 40px 20px;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 86px, rgba(0, 0, 0, 0.015) 86px, rgba(0, 0, 0, 0.015) 87px),
+                repeating-linear-gradient(60deg, transparent, transparent 86px, rgba(0, 0, 0, 0.015) 86px, rgba(0, 0, 0, 0.015) 87px),
+                repeating-linear-gradient(120deg, transparent, transparent 86px, rgba(0, 0, 0, 0.015) 86px, rgba(0, 0, 0, 0.015) 87px);
+            background-size: 100px 173px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 15% 20%, rgba(0, 0, 0, 0.01) 0%, transparent 3%),
+                radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.01) 0%, transparent 2.5%),
+                radial-gradient(circle at 45% 80%, rgba(0, 0, 0, 0.01) 0%, transparent 3.5%),
+                radial-gradient(circle at 75% 60%, rgba(0, 0, 0, 0.01) 0%, transparent 2%),
+                radial-gradient(circle at 25% 50%, rgba(0, 0, 0, 0.01) 0%, transparent 2.8%);
+            pointer-events: none;
+            z-index: 0;
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         .header {
@@ -29,6 +65,29 @@
             padding: 60px 20px;
             border-bottom: 3px solid #1a1a1a;
             margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image:
+                linear-gradient(30deg, transparent 48%, rgba(0, 0, 0, 0.02) 48%, rgba(0, 0, 0, 0.02) 52%, transparent 52%),
+                linear-gradient(90deg, transparent 48%, rgba(0, 0, 0, 0.02) 48%, rgba(0, 0, 0, 0.02) 52%, transparent 52%),
+                linear-gradient(150deg, transparent 48%, rgba(0, 0, 0, 0.02) 48%, rgba(0, 0, 0, 0.02) 52%, transparent 52%);
+            background-size: 60px 104px;
+            z-index: 0;
+        }
+        
+        .header h1,
+        .header p {
+            position: relative;
+            z-index: 1;
         }
         
         .header h1 {
@@ -134,13 +193,42 @@
         
         .section-header {
             margin-bottom: 30px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .section-header:hover {
+            background: #f0f0f0;
         }
         
         .section-title {
             font-size: 28px;
             font-weight: 400;
             color: #1a1a1a;
-            margin-bottom: 10px;
+            margin-bottom: 0;
+        }
+        
+        .toggle-icon {
+            font-size: 24px;
+            color: #666;
+            transition: transform 0.3s ease;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .section.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+        
+        .section.collapsed .section-content {
+            display: none;
         }
         
         .section-content {
@@ -367,9 +455,10 @@
             </div>
         </div>
 
-        <div class="section" id="section2">
-            <div class="section-header">
+        <div class="section collapsed" id="section2">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">2. Vision, Mission & Strategy Alignment</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <div class="instructions">
@@ -388,9 +477,10 @@
             </div>
         </div>
 
-        <div class="section" id="section3">
-            <div class="section-header">
+        <div class="section collapsed" id="section3">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">3. Business Case & Justification</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <div class="instructions">
@@ -409,9 +499,10 @@
             </div>
         </div>
 
-        <div class="section" id="section4">
-            <div class="section-header">
+        <div class="section collapsed" id="section4">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">4. High-Level Scope</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <div class="scope-grid">
@@ -453,9 +544,10 @@
             </div>
         </div>
 
-        <div class="section" id="section5">
-            <div class="section-header">
+        <div class="section collapsed" id="section5">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">5. Stakeholder Register</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <table class="stakeholder-table">
@@ -545,9 +637,10 @@
             </div>
         </div>
 
-        <div class="section" id="section6">
-            <div class="section-header">
+        <div class="section collapsed" id="section6">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">6. Methodology Explanation</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <div class="instructions">
@@ -564,9 +657,10 @@
             </div>
         </div>
 
-        <div class="section" id="section7">
-            <div class="section-header">
+        <div class="section collapsed" id="section7">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">7. Project Tool</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <div class="instructions">
@@ -583,9 +677,10 @@
             </div>
         </div>
 
-        <div class="section" id="section8">
-            <div class="section-header">
+        <div class="section collapsed" id="section8">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">8. Additional Charter Components</h2>
+                <div class="toggle-icon">▼</div>
             </div>
             <div class="section-content">
                 <div class="instructions">
@@ -606,5 +701,12 @@
     </div>
 
     <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
+
+    <script>
+        function toggleSection(header) {
+            const section = header.parentElement;
+            section.classList.toggle('collapsed');
+        }
+    </script>
 </body>
 </html>
