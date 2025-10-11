@@ -332,6 +332,74 @@
             background: #f8f8f8;
         }
         
+        .status-reports {
+            margin: 30px 0;
+        }
+        
+        .status-report {
+            background: #f8f8f8;
+            border: 2px solid #1a1a1a;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        
+        .report-header h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        
+        .report-status {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .status-green {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .status-yellow {
+            background: #ffc107;
+            color: #1a1a1a;
+        }
+        
+        .status-red {
+            background: #f44336;
+            color: white;
+        }
+        
+        .report-content h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1a1a1a;
+        }
+        
+        .report-content ul {
+            margin: 10px 0 20px 20px;
+        }
+        
+        .report-content p {
+            margin: 10px 0;
+        }
+        
         .image-container {
             margin: 40px 0;
             text-align: center;
@@ -437,6 +505,7 @@
                 <li><a href="#section6">Methodology Explanation</a></li>
                 <li><a href="#section7">Project Tool</a></li>
                 <li><a href="#section8">Additional Charter Components</a></li>
+                <li><a href="#section9" style="font-weight: 700; color: #d32f2f;">Weekly Status Reports</a></li>
             </ol>
         </div>
 
@@ -696,6 +765,56 @@
                     <li>Acceptance Criteria</li>
                     <li>Project Manager Authority & Approvals</li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="section" id="section9">
+            <div class="section-header" onclick="toggleSection(this)">
+                <h2 class="section-title">9. Weekly Status Reports</h2>
+                <div class="toggle-icon">▼</div>
+            </div>
+            <div class="section-content">
+                <div class="instructions">
+                    <strong>Instructions:</strong>
+                    This section tracks weekly project status reports and charter iterations throughout the semester. Each week's report will be added below.
+                </div>
+
+                <div class="status-reports">
+                    <!-- Week 1 Report Template -->
+                    <div class="status-report">
+                        <div class="report-header">
+                            <h3>Week 1 - [Date]</h3>
+                            <span class="report-status status-green">On Track</span>
+                        </div>
+                        <div class="report-content">
+                            <h4>Accomplishments This Week:</h4>
+                            <ul>
+                                <li>Completed project charter initial draft</li>
+                                <li>Identified key stakeholders</li>
+                                <li>Selected Microsoft Planner as project management tool</li>
+                            </ul>
+
+                            <h4>Work Planned for Next Week:</h4>
+                            <ul>
+                                <li>[Add planned activities here]</li>
+                                <li>[Add planned activities here]</li>
+                            </ul>
+
+                            <h4>Issues/Blockers:</h4>
+                            <ul>
+                                <li>None at this time</li>
+                            </ul>
+
+                            <h4>Charter Updates:</h4>
+                            <p>Initial charter created with all required sections.</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more weekly reports below as the semester progresses -->
+                    <div class="instructions" style="margin-top: 30px;">
+                        <strong>Note:</strong> Additional weekly status reports will be added here as the semester progresses. Each report will include accomplishments, planned work, issues, and any charter updates.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
