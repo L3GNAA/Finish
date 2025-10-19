@@ -223,17 +223,27 @@
             text-align: center;
         }
         
-        .section.collapsed .toggle-icon {
-            transform: rotate(-90deg);
+        .toggle-icon.open {
+            transform: rotate(0deg);
         }
         
-        .section.collapsed .section-content {
-            display: none;
+        .toggle-icon.closed {
+            transform: rotate(-90deg);
         }
         
         .section-content {
             font-size: 16px;
             color: #333;
+            max-height: 5000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+        
+        .section-content.hidden {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
         }
         
         .section-content h3,
@@ -263,21 +273,6 @@
         
         .section-content li {
             margin: 10px 0;
-        }
-        
-        .instructions {
-            background: #f0f0f0;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 3px solid #666;
-            font-size: 14px;
-            font-style: italic;
-        }
-        
-        .instructions strong {
-            font-style: normal;
-            display: block;
-            margin-bottom: 10px;
         }
         
         .scope-grid {
@@ -372,16 +367,6 @@
             color: white;
         }
         
-        .status-yellow {
-            background: #ffc107;
-            color: #1a1a1a;
-        }
-        
-        .status-red {
-            background: #f44336;
-            color: white;
-        }
-        
         .status-at-risk {
             background: #ff9800;
             color: white;
@@ -450,6 +435,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
+            z-index: 100;
         }
         
         .back-to-top:hover {
@@ -533,24 +519,22 @@
         </div>
 
         <div class="section" id="section1">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">1. Project Title & Description</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
-                
+            <div class="section-content hidden">
                 <h3>Project Title: My Goal</h3>
                 <p>I am choosing to pursue an entry-level position in Information Technology. I selected this project because it directly supports my academic and professional development. By optimizing a variety of software tools, I can set a pace where establishing myself in the IT field is possible by the end of the semester.</p>
             </div>
         </div>
 
         <div class="section" id="section2">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">2. Vision, Mission & Strategy Alignment</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
-                
+            <div class="section-content hidden">
                 <h4>Personal Mission Connection:</h4>
                 <p>Create and refine a plan where deliverables/milestones can be met for landing an entry-level position in the field of Information Technology.</p>
                 
@@ -563,12 +547,11 @@
         </div>
 
         <div class="section" id="section3">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">3. Business Case & Justification</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
-                
+            <div class="section-content hidden">
                 <h4>Professional Value:</h4>
                 <p>Building this project will expose me to new skills and apply them to future endeavors.</p>
                 
@@ -581,11 +564,11 @@
         </div>
 
         <div class="section" id="section4">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">4. High-Level Scope</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
+            <div class="section-content hidden">
                 <div class="scope-grid">
                     <div class="scope-card">
                         <h4>In Scope for Semester Project</h4>
@@ -626,11 +609,11 @@
         </div>
 
         <div class="section" id="section5">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">5. Stakeholder Register</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
+            <div class="section-content hidden">
                 <table class="stakeholder-table">
                     <thead>
                         <tr>
@@ -713,38 +696,42 @@
         </div>
 
         <div class="section" id="section6">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">6. Methodology Explanation</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
-                
+            <div class="section-content hidden">
                 <h4>Hybrid Approach</h4>
                 <p>I'll be going with a Hybrid - Iterative approach. It lets me stay on track and prioritize deliverables, as well as adapting flexibly while moving toward a fulfilling promised vision statement.</p>
+                
+                <div class="image-container">
+                    <img src="hybridflow.JPG" alt="Methodology Diagram">
+                </div>
             </div>
         </div>
 
         <div class="section" id="section7">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">7. Project Tool</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
-                
+            <div class="section-content hidden">
                 <h4>Microsoft Planner</h4>
                 <p>I went with Microsoft Planner. Visually the tool has a great aesthetic, with a user-friendly interface to boot. I particularly enjoy the automated variety of view-boards, my favorite being the charts tabs. There is an option given to attach URL links for assignments which isn't ideal, but seeing as I'll be using GitHub as a repository convenience won't be an issue.</p>
+                
+                <div class="image-container">
+                    <img src="grid.JPG" alt="Microsoft Planner Grid View">
+                </div>
             </div>
         </div>
 
         <div class="section" id="section8">
-            <div class="section-header" onclick="toggleSection(event)">
+            <div class="section-header" onclick="toggleSection(this)">
                 <h2 class="section-title">8. Weekly Status Reports</h2>
-                <div class="toggle-icon">▼</div>
+                <div class="toggle-icon closed">▼</div>
             </div>
-            <div class="section-content">
-
+            <div class="section-content hidden">
                 <div class="status-reports">
-                    <!-- Week 7 Report -->
                     <div class="status-report">
                         <div class="report-header">
                             <h3>Week 7 - Oct 3rd 2025</h3>
@@ -774,7 +761,6 @@
                         </div>
                     </div>
 
-                    <!-- Week 9 Report -->
                     <div class="status-report">
                         <div class="report-header">
                             <h3>Week 9 - Oct 19th 2025</h3>
@@ -833,6 +819,20 @@
                             <p>No changes occurred since the last reporting period.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <div class="instructions" style="margin-top: 30px;">
-                        <strong>Note:</strong> Additional
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('closed');
+            icon.classList.toggle('open');
+        }
+    </script>
