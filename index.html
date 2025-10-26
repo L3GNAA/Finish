@@ -208,11 +208,11 @@
         </div>
       </section>
 
-      <section id="section7">
-        <button class="section-toggle" aria-expanded="false" aria-controls="s7"><span class="section-title">7. Project Tool</span><span class="chev rot" aria-hidden="true">▼</span></button>
-        <div id="s7" class="section-content" hidden>
+      $1
           <h4>Microsoft Planner</h4>
           <p>I chose Microsoft Planner for its clear visuals and user‑friendly interface. I like its different board views, especially the charts tab. It supports attaching URLs to tasks; I will store source files in GitHub.</p>
+
+          <!-- Grid View -->
           <div class="planner-showcase">
             <div class="planner-card" aria-label="Demo: tasks completed in Planner grid view">
               <h5>Microsoft Planner — Grid View (Demo)</h5>
@@ -228,6 +228,7 @@
             </figure>
           </div>
 
+          <!-- Board View -->
           <div class="planner-showcase">
             <div class="planner-card" aria-label="Demo: tasks completed in Planner board view">
               <h5>Microsoft Planner — Board View (Demo)</h5>
@@ -241,8 +242,23 @@
               <figcaption>Microsoft Planner — Board View</figcaption>
             </figure>
           </div>
-        </div>
-      </section>
+
+          <!-- Schedule View -->
+          <div class="planner-showcase">
+            <div class="planner-card" aria-label="Demo: tasks completed in Planner schedule view">
+              <h5>Microsoft Planner — Schedule View (Demo)</h5>
+              <ul class="task-list completed">
+                <li><span class="tick">✅</span> Choose certificate</li>
+                <li><span class="tick">✅</span> Study &amp; practice</li>
+                <li><span class="tick">✅</span> Take exam or complete course</li>
+              </ul>
+            </div>
+            <figure class="planner-figure">
+              <img src="shedule.JPG" alt="Microsoft Planner schedule view screenshot" loading="lazy" />
+              <figcaption>Microsoft Planner — Schedule View</figcaption>
+            </figure>
+          </div>
+        $2
 
       <section id="section8">
         <button class="section-toggle" aria-expanded="false" aria-controls="s8"><span class="section-title">8. Weekly Status Reports</span><span class="chev rot" aria-hidden="true">▼</span></button>
@@ -258,73 +274,30 @@
   <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑ Top</button>
 
   <script>
+    // Collapsible sections: all collapsed by default; click toggles expand/collapse
     const saveKey = (id) => `section-open::${id}`;
     function setExpanded(btn, expanded) {
       const content = document.getElementById(btn.getAttribute('aria-controls'));
       btn.setAttribute('aria-expanded', String(expanded));
       const chev = btn.querySelector('.chev');
-      if (expanded) {
-        content.removeAttribute('hidden');
-        chev?.classList.remove('rot');
-      } else {
-        content.setAttribute('hidden', '');
-        chev?.classList.add('rot');
-      }
+      if (expanded) { content.removeAttribute('hidden'); chev?.classList.remove('rot'); }
+      else { content.setAttribute('hidden', ''); chev?.classList.add('rot'); }
       try { localStorage.setItem(saveKey(content.id), expanded ? '1' : '0'); } catch {}
     }
-
-    // NEW: always-expand behavior — clicks only open, never close
-    function expandOnly(evt) {
+    function toggle(evt) {
       const btn = evt.currentTarget;
-      setExpanded(btn, true);
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      setExpanded(btn, !expanded);
     }
-
-    document.querySelectorAll('.section-toggle').forEach((btn) => {
-      btn.addEventListener('click', expandOnly);
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); expandOnly({ currentTarget: btn }); }
-      });
+    document.querySelectorAll('.section-toggle').forEach((btn)=>{
+      btn.addEventListener('click', toggle);
+      btn.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); btn.click(); }});
+      // restore saved state (defaults to collapsed)
       const contentId = btn.getAttribute('aria-controls');
-      const saved = (() => { try { return localStorage.getItem(saveKey(contentId)); } catch { return null; } })();
-      if (saved === '1') setExpanded(btn, true);
+      const saved = (()=>{ try { return localStorage.getItem(saveKey(contentId)); } catch { return null; } })();
+      if(saved==='1') setExpanded(btn,true);
+      else setExpanded(btn,false);
     });
-
-    // Open target section from hash navigation
-    function openHashTarget() {
-      if (location.hash) {
-        const section = document.querySelector(location.hash);
-        const btn = section?.querySelector('.section-toggle');
-        if (btn) setExpanded(btn, true);
-      }
-    }
-    window.addEventListener('hashchange', openHashTarget);
-    openHashTarget();
-
-    // Back to top
-    document.querySelector('.back-to-top')?.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-  <script>
-    // Override to make sections collapsible (toggle open/closed)
-    (function(){
-      function toggle(evt){
-        const btn = evt.currentTarget;
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        if (typeof setExpanded === 'function') {
-          setExpanded(btn, !expanded);
-        }
-      }
-      // Remove previous expand-only listeners by cloning nodes, then attach toggle listeners
-      document.querySelectorAll('.section-toggle').forEach((btn)=>{
-        const clone = btn.cloneNode(true);
-        btn.replaceWith(clone);
-        clone.addEventListener('click', toggle);
-        clone.addEventListener('keydown', (e)=>{
-          if(e.key==='Enter' || e.key===' '){ e.preventDefault(); clone.click(); }
-        });
-      });
-    })();
   </script>
 </body>
 </html>
