@@ -74,21 +74,29 @@
     .planner-figure figcaption{text-align:center;margin-top:6px;font-size:.9rem;color:var(--subtle-ink)}
   </style>
   <style id="bg-override">
-    /* Restore original subtle background */
+    /* Restore original subtle background per reference */
     body::before {
-      background-image:
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
         repeating-linear-gradient(0deg, transparent, transparent 86px, rgba(0, 0, 0, 0.015) 86px, rgba(0, 0, 0, 0.015) 87px),
         repeating-linear-gradient(60deg, transparent, transparent 86px, rgba(0, 0, 0, 0.015) 86px, rgba(0, 0, 0, 0.015) 87px),
         repeating-linear-gradient(120deg, transparent, transparent 86px, rgba(0, 0, 0, 0.015) 86px, rgba(0, 0, 0, 0.015) 87px);
       background-size: 100px 173px;
+      pointer-events: none; z-index: 0;
     }
     body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
       background-image:
         radial-gradient(circle at 15% 20%, rgba(0, 0, 0, 0.01) 0%, transparent 3%),
         radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.01) 0%, transparent 2.5%),
         radial-gradient(circle at 45% 80%, rgba(0, 0, 0, 0.01) 0%, transparent 3.5%),
         radial-gradient(circle at 75% 60%, rgba(0, 0, 0, 0.01) 0%, transparent 2%),
         radial-gradient(circle at 25% 50%, rgba(0, 0, 0, 0.01) 0%, transparent 2.8%);
+      pointer-events: none; z-index: 0;
     }
   </style>
 </head>
@@ -170,7 +178,24 @@
         <button class="section-toggle" aria-expanded="false" aria-controls="s5"><span class="section-title">5. Stakeholder Register</span><span class="chev rot" aria-hidden="true">▼</span></button>
         <div id="s5" class="section-content" hidden>
           <table class="stakeholder-table"><caption>Key stakeholders with category, power/interest, and engagement strategy.</caption><thead><tr><th scope="col">Stakeholder</th><th scope="col">Category</th><th scope="col">Role/Interest</th><th scope="col">Power</th><th scope="col">Interest</th><th scope="col">Engagement Strategy</th></tr></thead><tbody><tr><td>Potential Employers/Clients</td><td>External</td><td>Find examples of best work, assess skills, and understand brand</td><td>High</td><td>High</td><td>Manage closely — user‑friendly site, relevant projects prominent, clear contact info.</td></tr><tr><td>The Creator</td><td>Internal</td><td>Project owner; needs platform representing brand and abilities</td><td>High</td><td>High</td><td>Manage closely — set objectives, self‑reviews, track performance.</td></tr><tr><td>Friends and Family</td><td>External</td><td>Provide initial feedback on design and clarity</td><td>Low</td><td>High</td><td>Keep informed — share updates and request general feedback.</td></tr><tr><td>Recruiters/HR Professionals</td><td>External</td><td>Scan credentials and skills for job fit</td><td>High</td><td>Medium</td><td>Keep satisfied — downloadable resume, clear skills list.</td></tr><tr><td>Mentors/Industry Peers</td><td>External</td><td>Review work and provide expert feedback</td><td>Medium</td><td>Medium</td><td>Keep informed — send direct links for targeted feedback.</td></tr><tr><td>Website Hosting/Platform</td><td>Internal</td><td>Technical foundation of site; balance cost and requirements</td><td>Medium</td><td>Low</td><td>Keep satisfied — pick reliable platform that fits needs.</td></tr><tr><td>The General Public</td><td>External</td><td>Visitors via search or social</td><td>Low</td><td>Low</td><td>Monitor — clear navigation and clean design.</td></tr><tr><td>Educational Institution/Instructor</td><td>External</td><td>Evaluate quality and professionalism for course</td><td>High</td><td>Medium</td><td>Keep satisfied — follow requirements and submit polished work.</td></tr></tbody></table>
-          <div class="image-container"><figure><img src="square.JPG" alt="Power‑interest grid diagram" loading="lazy" /><figcaption>Power‑Interest Grid</figcaption></figure><figure><img src="deliv.JPG" alt="Deliverables breakdown diagram" loading="lazy" /><figcaption>Deliverables Breakdown</figcaption></figure><figure><img src="supermoney.JPG" alt="Budget estimation graphic" loading="lazy" /><figcaption>Budget Estimation</figcaption></figure></div>
+          <div class="image-container"><figure><img src="square.JPG" alt="Power‑interest grid diagram" loading="lazy" /><figcaption>Power‑Interest Grid</figcaption></figure><figure><img src="deliv.JPG" alt="Deliverables breakdown diagram" loading="lazy" /><figcaption>Deliverables Breakdown</figcaption></figure><figure><img src="supermoney.JPG" alt="Budget estimation graphic" loading="lazy" /><figcaption>Budget Estimation</figcaption></figure>
+          </div>
+
+          <!-- New: Schedule view showcase -->
+          <div class="planner-showcase">
+            <div class="planner-card" aria-label="Demo: tasks completed in Planner schedule view">
+              <h5>Microsoft Planner — Schedule View (Demo)</h5>
+              <ul class="task-list completed">
+                <li><span class="tick">✅</span> Block study time</li>
+                <li><span class="tick">✅</span> Add class deadlines</li>
+                <li><span class="tick">✅</span> Sync calendar</li>
+              </ul>
+            </div>
+            <figure class="planner-figure">
+              <img src="shedule.JPG" alt="Microsoft Planner schedule view screenshot" loading="lazy" />
+              <figcaption>Microsoft Planner — Schedule View</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
