@@ -60,6 +60,19 @@
     @media print{.back-to-top,.skip-link,nav.toc{display:none!important}.section-content[hidden]{display:block!important;opacity:1!important;max-height:none!important;padding:0!important}.section-toggle{background:transparent;border:none;padding:0}header.hero{margin-bottom:12px;border-bottom:1px solid #000}body{padding:8px}}
     @media (prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
   </style>
+  <!-- Fun Planner widget styles -->
+  <style>
+    .planner-showcase{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin:10px 0 24px}
+    .planner-card{flex:1 1 280px;max-width:420px;background:linear-gradient(180deg,#fff7f0, #fff);border:2px solid var(--ink);border-radius:14px;padding:14px 16px;box-shadow:2px 2px 0 var(--ink)}
+    .planner-card h5{margin:0 0 8px;font-size:1rem;letter-spacing:.02em}
+    .task-list{list-style:none;margin:0;padding:0}
+    .task-list li{display:flex;gap:8px;align-items:flex-start;padding:8px 10px;margin:8px 0;border:1px dashed var(--border);border-radius:10px;background:#fff}
+    .task-list li .tick{font-weight:700;}
+    .task-list.completed li{opacity:.95}
+    .planner-figure{flex:1 1 360px;margin:0}
+    .planner-figure img{display:block;width:100%;height:auto;border:1px solid var(--border);background:#fff}
+    .planner-figure figcaption{text-align:center;margin-top:6px;font-size:.9rem;color:var(--subtle-ink)}
+  </style>
   <style id="bg-override">
     /* Restore original subtle background */
     body::before {
@@ -175,7 +188,34 @@
         <div id="s7" class="section-content" hidden>
           <h4>Microsoft Planner</h4>
           <p>I chose Microsoft Planner for its clear visuals and user‑friendly interface. I like its different board views, especially the charts tab. It supports attaching URLs to tasks; I will store source files in GitHub.</p>
-          <div class="image-container"><figure><img src="grid.JPG" alt="Microsoft Planner grid view screenshot" loading="lazy" /><figcaption>Microsoft Planner — Grid View</figcaption></figure><figure><img src="board.JPG" alt="Microsoft Planner board view screenshot" loading="lazy" /><figcaption>Microsoft Planner — Board View</figcaption></figure></div>
+          <div class="planner-showcase">
+            <div class="planner-card" aria-label="Demo: tasks completed in Planner grid view">
+              <h5>Microsoft Planner — Grid View (Demo)</h5>
+              <ul class="task-list completed">
+                <li><span class="tick">✅</span> Draft project schedule &amp; milestones</li>
+                <li><span class="tick">✅</span> Setup GitHub repository</li>
+                <li><span class="tick">✅</span> Select AI builder tool</li>
+              </ul>
+            </div>
+            <figure class="planner-figure">
+              <img src="grid.JPG" alt="Microsoft Planner grid view screenshot" loading="lazy" />
+              <figcaption>Microsoft Planner — Grid View</figcaption>
+            </figure>
+          </div>
+
+          <div class="planner-showcase">
+            <div class="planner-card" aria-label="Demo: tasks completed in Planner board view">
+              <h5>Microsoft Planner — Board View (Demo)</h5>
+              <ul class="task-list completed">
+                <li><span class="tick">✅</span> Update Profile &amp; Headline</li>
+                <li><span class="tick">✅</span> Add Profile Link</li>
+              </ul>
+            </div>
+            <figure class="planner-figure">
+              <img src="board.JPG" alt="Microsoft Planner board view screenshot" loading="lazy" />
+              <figcaption>Microsoft Planner — Board View</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
