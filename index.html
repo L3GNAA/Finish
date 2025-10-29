@@ -733,7 +733,54 @@
                     <div class="status-reports">
                         <div class="status-report">
                             <div class="report-header">
-                                <h3>Week 7 - Oct 3rd 2025</h3>
+                                <h4>Issues & Risks / Mitigations:</h4>
+                                <p>No issues or risks identified for this reporting period.</p>
+
+                                <h4>Changes Since Last Report:</h4>
+                                <p>No changes occurred since the last reporting period.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
+
+    <script>
+        function setExpanded(btn, expanded) {
+            const content = document.getElementById(btn.getAttribute('aria-controls'));
+            btn.setAttribute('aria-expanded', String(expanded));
+            const chev = btn.querySelector('.chev');
+            if (expanded) {
+                content.removeAttribute('hidden');
+                chev?.classList.remove('rot');
+            } else {
+                content.setAttribute('hidden', '');
+                chev?.classList.add('rot');
+            }
+        }
+        
+        function toggle(evt) {
+            const btn = evt.currentTarget;
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            setExpanded(btn, !expanded);
+        }
+        
+        document.querySelectorAll('.section-toggle').forEach((btn) => {
+            btn.addEventListener('click', toggle);
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+            setExpanded(btn, false);
+        });
+    </script>
+</body>
+</html>3>Week 7 - Oct 3rd 2025</h3>
                                 <span class="report-status status-green">On Track</span>
                             </div>
                             <div class="report-content">
