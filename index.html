@@ -422,6 +422,78 @@
             margin: 20px 0;
         }
         
+        .task-image-pair {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 40px 0;
+        }
+        
+        .completion-box {
+            flex-shrink: 0;
+            width: 280px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .completion-box::before {
+            content: '✓';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            color: rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+        }
+        
+        .completion-box h4 {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .completion-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .completion-box li {
+            color: white;
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .completion-box li::before {
+            content: '□';
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .task-image-pair img {
+            flex: 1;
+            max-width: calc(100% - 310px);
+            height: auto;
+            border: 1px solid #e0e0e0;
+        }
+        
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -476,6 +548,18 @@
             .stakeholder-table th,
             .stakeholder-table td {
                 padding: 10px;
+            }
+            
+            .task-image-pair {
+                flex-direction: column;
+            }
+            
+            .completion-box {
+                width: 100%;
+            }
+            
+            .task-image-pair img {
+                max-width: 100%;
             }
         }
     </style>
@@ -725,9 +809,39 @@
                 <h4>Microsoft Planner</h4>
                 <p>I went with Microsoft Planner. Visually the tool has a great aesthetic, with a user-friendly interface to boot. I particularly enjoy the automated variety of view-boards, my favorite being the charts tabs. There is an option given to attach URL links for assignments which isn't ideal, but seeing as I'll be using GitHub as a repository convenience won't be an issue.</p>
                 
-                <div class="image-container">
+                <div class="task-image-pair">
+                    <div class="completion-box">
+                        <h4>Tasks</h4>
+                        <ul>
+                            <li>Draft project schedule & milestones</li>
+                            <li>Setup GitHub repository</li>
+                            <li>Choose Certification</li>
+                        </ul>
+                    </div>
                     <img src="grid.JPG" alt="Microsoft Planner Grid View">
+                </div>
+                
+                <div class="task-image-pair">
+                    <div class="completion-box">
+                        <h4>Tasks</h4>
+                        <ul>
+                            <li>Select Ai builder tool</li>
+                            <li>Update Profile & Headline</li>
+                            <li>Add Portfolio Link</li>
+                        </ul>
+                    </div>
                     <img src="board.JPG" alt="Microsoft Planner Board View">
+                </div>
+                
+                <div class="task-image-pair">
+                    <div class="completion-box">
+                        <h4>Tasks</h4>
+                        <ul>
+                            <li>Study & Practice</li>
+                            <li>Take Certificate Exam</li>
+                        </ul>
+                    </div>
+                    <img src="schedule.JPG" alt="Microsoft Planner schedule View">
                 </div>
             </div>
         </div>
@@ -827,7 +941,6 @@
                         </div>
                     </div>
 
-                    <!-- Week 10 inserted below -->
                     <div class="status-report">
                         <div class="report-header">
                             <h3>Week 10 - Oct 25th 2025</h3>
@@ -890,7 +1003,6 @@
                             <strong>Reason / Impact if not made:</strong> We are not back on track, after checking-in with instructor, Maria Espinoza.</p>
                         </div>
                     </div>
-                    <!-- End Week 10 -->
                 </div>
             </div>
         </div>
