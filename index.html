@@ -10,7 +10,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: Georgia, 'Times New Roman', serif;
       background-color: #fff;
@@ -19,46 +18,39 @@
       padding: 40px 20px;
       position: relative;
     }
-
     .container {
       max-width: 900px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
     }
-
     .header {
       text-align: center;
       padding: 60px 20px;
       border-bottom: 3px solid #1a1a1a;
       margin-bottom: 50px;
     }
-
     .header h1 {
       font-size: 48px;
       font-weight: 400;
       letter-spacing: 2px;
       color: #1a1a1a;
     }
-
     .student-info {
       background: #f8f8f8;
       padding: 30px;
       margin-bottom: 50px;
       border-left: 4px solid #1a1a1a;
     }
-
     .student-info h3 {
       font-size: 20px;
       margin-bottom: 20px;
     }
-
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .info-label {
       font-weight: bold;
       text-transform: uppercase;
@@ -66,48 +58,39 @@
       color: #666;
       margin-bottom: 5px;
     }
-
     .info-value {
       font-size: 16px;
     }
-
     .toc {
       background: #f8f8f8;
       padding: 30px;
       border: 2px solid #1a1a1a;
       margin-bottom: 50px;
     }
-
     .toc h2 {
       font-size: 24px;
       margin-bottom: 20px;
     }
-
     .toc ol {
       list-style-position: inside;
     }
-
     .toc li {
       margin: 10px 0;
     }
-
     .toc a {
       text-decoration: none;
       color: #1a1a1a;
       transition: color 0.2s;
     }
-
     .toc a:hover {
       color: #333;
       text-decoration: underline;
     }
-
     .section {
       margin-bottom: 40px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 20px;
     }
-
     .section-header {
       display: flex;
       justify-content: space-between;
@@ -117,20 +100,16 @@
       padding: 15px;
       border: 1px solid #ddd;
     }
-
     .section-title {
       font-size: 24px;
     }
-
     .toggle-icon {
       font-size: 20px;
       transition: transform 0.3s ease;
     }
-
     .toggle-icon.closed {
       transform: rotate(-90deg);
     }
-
     .section-content {
       max-height: 0;
       overflow: hidden;
@@ -138,21 +117,43 @@
       transition: all 0.3s ease;
       padding: 0 15px;
     }
-
     .section-content.visible {
       max-height: 5000px;
       opacity: 1;
       padding-top: 15px;
     }
-
+    .status-report {
+      background: #f8f8f8;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #1a1a1a;
+    }
+    .status-report h4 {
+      color: #1a1a1a;
+      margin-bottom: 15px;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #4CAF50;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 3px;
+      margin-left: 10px;
+    }
+    .status-badge.at-risk {
+      background: #ff9800;
+    }
+    .status-badge.medium {
+      background: #ff9800;
+    }
     h3, h4 {
       margin: 20px 0 10px;
     }
-
     p, li {
       margin: 10px 0;
     }
-
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -165,11 +166,9 @@
       border-radius: 4px;
       font-size: 14px;
     }
-
     .back-to-top:hover {
       background: #333;
     }
-
     @media (max-width: 768px) {
       .header h1 {
         font-size: 32px;
@@ -185,7 +184,174 @@
     <div class="header">
       <h1>Breaking Into Tech: My Career Entry Strategy</h1>
     </div>
-    <!-- Content sections go here -->
+
+    <div class="student-info">
+      <h3>Project Information</h3>
+      <div class="info-grid">
+        <div>
+          <div class="info-label">Project Manager</div>
+          <div class="info-value">Angel Contreras</div>
+        </div>
+        <div>
+          <div class="info-label">Course</div>
+          <div class="info-value">Managing IT Projects</div>
+        </div>
+        <div>
+          <div class="info-label">Project Goal</div>
+          <div class="info-value">Create a roadmap centered on being more accessible to the job market</div>
+        </div>
+        <div>
+          <div class="info-label">Success Metrics</div>
+          <div class="info-value">Interviews || Employment Retainment</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="#section1">Project Overview</a></li>
+        <li><a href="#section2">Project Scope</a></li>
+        <li><a href="#section3">Timeline & Milestones</a></li>
+        <li><a href="#section4">Resources & Budget</a></li>
+        <li><a href="#section5">Risk Management</a></li>
+        <li><a href="#section6">Communication Plan</a></li>
+        <li><a href="#section7">Quality Assurance</a></li>
+        <li><a href="#section8">Status Reports</a></li>
+      </ol>
+    </div>
+
+    <div id="section1" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">1. Project Overview</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>Project Purpose</h3>
+        <p>This project aims to create a comprehensive career entry strategy focused on making Angel Contreras more accessible and attractive to potential employers in the tech industry.</p>
+        
+        <h3>Objectives</h3>
+        <p>The primary objectives include developing a professional portfolio, optimizing LinkedIn presence, creating a job tracking system, and establishing sustainable job search habits that lead to interviews and employment.</p>
+      </div>
+    </div>
+
+    <div id="section2" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">2. Project Scope</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>In Scope</h3>
+        <p>Portfolio website development, LinkedIn profile optimization, job application tracking system, networking strategy, and interview preparation materials.</p>
+        
+        <h3>Out of Scope</h3>
+        <p>Advanced certifications requiring extensive training, relocation assistance, and ongoing employment coaching beyond the initial entry phase.</p>
+      </div>
+    </div>
+
+    <div id="section3" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">3. Timeline & Milestones</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>Key Milestones</h3>
+        <p><strong>Portfolio Website:</strong> Target Date - October 24, 2025 (ON TRACK)</p>
+        <p><strong>LinkedIn Profile:</strong> Target Date - October 24, 2025 (ON TRACK)</p>
+        <p><strong>Job Tracker:</strong> Target Date - October 24, 2025 (AT RISK)</p>
+      </div>
+    </div>
+
+    <div id="section4" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">4. Resources & Budget</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>Resources</h3>
+        <p>Development tools, AI assistance (Claude), design resources, and networking platforms.</p>
+        
+        <h3>Time Investment</h3>
+        <p>Structured work sessions using gamified productivity approach with Claude AI to maintain consistent progress on website development and project components.</p>
+      </div>
+    </div>
+
+    <div id="section5" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">5. Risk Management</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>Current Risks</h3>
+        <p><strong>Job Tracker Development:</strong> Medium Risk - Need to start reaching out to companies.</p>
+        <p><strong>Mitigation:</strong> Prioritize company outreach and implement systematic approach to job applications.</p>
+      </div>
+    </div>
+
+    <div id="section6" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">6. Communication Plan</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>Stakeholder Updates</h3>
+        <p>Weekly status reports tracking progress, accomplishments, and upcoming plans. Regular check-ins with course instructor Maria Espinoza.</p>
+      </div>
+    </div>
+
+    <div id="section7" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">7. Quality Assurance</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <h3>Success Metrics</h3>
+        <p>Number of interviews secured and employment retainment serve as the primary indicators of project success.</p>
+        
+        <h3>Quality Standards</h3>
+        <p>Professional presentation of portfolio, optimized LinkedIn profile following industry best practices, and systematic job application tracking.</p>
+      </div>
+    </div>
+
+    <div id="section8" class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <h2 class="section-title">8. Status Reports</h2>
+        <span class="toggle-icon closed">▼</span>
+      </div>
+      <div class="section-content">
+        <div class="status-report">
+          <h4>📊 Week 10 - October 25, 2025 <span class="status-badge">ON TRACK</span></h4>
+          <p><strong>Generated:</strong> Saturday, October 25, 2025 at 12:21 PM</p>
+          
+          <h4>Executive Summary</h4>
+          <p>The project is back on track, with the website portion making strides in its design. I gamified the use of Claude AI, by only working on the web building of the project to the point where Claude will not allow the user to proceed until a specified time. I now look forward to those set times where I then crank-out as much productivity as possible to the UI.</p>
+          
+          <h4>✅ Accomplishments This Week</h4>
+          <p>✓ Website<br>
+          ✓ LinkedIn<br>
+          ✓ Discipline</p>
+          
+          <h4>📅 Plan for Next Week</h4>
+          <p>→ LinkedIn feedback<br>
+          → Design & UI<br>
+          → Project Planner</p>
+          
+          <h4>🎯 Milestone Status</h4>
+          <p><strong>Portfolio:</strong> 10/24/2025 <span class="status-badge">ON TRACK</span><br>
+          <strong>Job Tracker:</strong> 10/24/2025 <span class="status-badge at-risk">AT RISK</span><br>
+          <strong>LinkedIn:</strong> 10/24/2025 <span class="status-badge">ON TRACK</span></p>
+          
+          <h4>Issues & Risks</h4>
+          <p><strong>Job Tracker</strong> <span class="status-badge medium">MEDIUM</span><br>
+          <strong>Mitigation:</strong> I need to start looking into reaching out to companies.</p>
+          
+          <h4>🔄 Changes Since Last Report</h4>
+          <p><strong>Change #1 (2025-10-25):</strong> The web building portion of the project was falling seriously behind.<br>
+          <strong>Reason/Impact:</strong> We are now back on track, after checking-in with instructor, Maria Espinoza.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
   <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑ Top</button>
   <script>
