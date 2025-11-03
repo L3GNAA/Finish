@@ -5,144 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Breaking Into Tech: My Career Entry Strategy</title>
   <style>
-    :root {
-      --ink: #1a1a1a;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #fff; color: var(--ink);
-      line-height: 1.8; padding: 40px 20px; position: relative;
-      font-size: 16px;
+    :root { --ink:#1a1a1a; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Georgia,"Times New Roman",serif;
+      background:#fff;color:var(--ink);
+      line-height:1.8;padding:40px 20px;position:relative;font-size:16px;
     }
     /* subtle background texture */
-    body::before {
-      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    body::before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
       background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 86px, rgba(0,0,0,.015) 86px, rgba(0,0,0,.015) 87px),
-        repeating-linear-gradient(60deg, transparent, transparent 86px, rgba(0,0,0,.015) 86px, rgba(0,0,0,.015) 87px),
-        repeating-linear-gradient(120deg, transparent, transparent 86px, rgba(0,0,0,.015) 86px, rgba(0,0,0,.015) 87px);
-      background-size: 100px 173px;
+        repeating-linear-gradient(0deg,transparent,transparent 86px,rgba(0,0,0,.015) 86px,rgba(0,0,0,.015) 87px),
+        repeating-linear-gradient(60deg,transparent,transparent 86px,rgba(0,0,0,.015) 86px,rgba(0,0,0,.015) 87px),
+        repeating-linear-gradient(120deg,transparent,transparent 86px,rgba(0,0,0,.015) 86px,rgba(0,0,0,.015) 87px);
+      background-size:100px 173px;
     }
-    body::after {
-      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
       background-image:
-        radial-gradient(circle at 15% 20%, rgba(0,0,0,.01) 0%, transparent 3%),
-        radial-gradient(circle at 85% 15%, rgba(0,0,0,.01) 0%, transparent 2.5%),
-        radial-gradient(circle at 45% 80%, rgba(0,0,0,.01) 0%, transparent 3.5%),
-        radial-gradient(circle at 75% 60%, rgba(0,0,0,.01) 0%, transparent 2%),
-        radial-gradient(circle at 25% 50%, rgba(0,0,0,.01) 0%, transparent 2.8%);
+        radial-gradient(circle at 15% 20%,rgba(0,0,0,.01) 0%,transparent 3%),
+        radial-gradient(circle at 85% 15%,rgba(0,0,0,.01) 0%,transparent 2.5%),
+        radial-gradient(circle at 45% 80%,rgba(0,0,0,.01) 0%,transparent 3.5%),
+        radial-gradient(circle at 75% 60%,rgba(0,0,0,.01) 0%,transparent 2%),
+        radial-gradient(circle at 25% 50%,rgba(0,0,0,.01) 0%,transparent 2.8%);
     }
 
-    .container { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+    .container{max-width:900px;margin:0 auto;position:relative;z-index:1}
 
-    .header { text-align: center; padding: 60px 20px; border-bottom: 3px solid var(--ink); margin-bottom: 50px; position: relative; overflow: hidden; }
-    .header::before {
-      content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; z-index: 0;
+    .header{ text-align:center;padding:60px 20px;border-bottom:3px solid var(--ink);margin-bottom:50px;position:relative;overflow:hidden; }
+    .header::before{
+      content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;z-index:0;
       background-image:
-        linear-gradient(30deg, transparent 48%, rgba(0,0,0,.02) 48%, rgba(0,0,0,.02) 52%, transparent 52%),
-        linear-gradient(90deg, transparent 48%, rgba(0,0,0,.02) 48%, rgba(0,0,0,.02) 52%, transparent 52%),
-        linear-gradient(150deg, transparent 48%, rgba(0,0,0,.02) 48%, rgba(0,0,0,.02) 52%, transparent 52%);
-      background-size: 60px 104px;
+        linear-gradient(30deg,transparent 48%,rgba(0,0,0,.02) 48%,rgba(0,0,0,.02) 52%,transparent 52%),
+        linear-gradient(90deg,transparent 48%,rgba(0,0,0,.02) 48%,rgba(0,0,0,.02) 52%,transparent 52%),
+        linear-gradient(150deg,transparent 48%,rgba(0,0,0,.02) 48%,rgba(0,0,0,.02) 52%,transparent 52%);
+      background-size:60px 104px;
     }
-    .header h1, .header p { position: relative; z-index: 1; }
-    .header h1 { font-weight: 400; letter-spacing: 2px; margin-bottom: 15px; color: var(--ink); font-size: clamp(28px, 5vw, 48px); }
-    .header p { font-size: 16px; color: #666; font-style: italic; }
+    .header h1,.header p{position:relative;z-index:1}
+    .header h1{font-weight:400;letter-spacing:2px;margin-bottom:15px;color:var(--ink);font-size:clamp(28px,5vw,48px)}
+    .header p{font-size:16px;color:#666;font-style:italic}
 
-    .student-info { background: #f8f8f8; padding: 30px; margin-bottom: 50px; border-left: 4px solid var(--ink); }
-    .student-info h3 { font-size: 20px; font-weight: 400; margin-bottom: 20px; color: var(--ink); }
-    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 20px; }
-    .info-item { padding: 15px 0; }
-    .info-label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-bottom: 5px; }
-    .info-value { font-size: 16px; color: var(--ink); }
+    .student-info{background:#f8f8f8;padding:30px;margin-bottom:50px;border-left:4px solid var(--ink)}
+    .student-info h3{font-size:20px;font-weight:400;margin-bottom:20px;color:var(--ink)}
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .info-item{padding:15px 0}
+    .info-label{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:5px}
+    .info-value{font-size:16px;color:var(--ink)}
 
-    .toc { background: #f8f8f8; padding: 40px; margin-bottom: 50px; border: 2px solid var(--ink); }
-    .toc h2 { font-size: 24px; font-weight: 400; margin-bottom: 25px; color: var(--ink); }
-    .toc ol { list-style-position: inside; font-size: 16px; }
-    .toc li { margin: 12px 0; cursor: pointer; transition: all .2s ease; }
-    .toc li:hover { margin-left: 10px; font-weight: 700; }
-    .toc a { color: var(--ink); text-decoration: none; }
-    .toc a:hover { text-decoration: underline; }
+    .toc{background:#f8f8f8;padding:40px;margin-bottom:50px;border:2px solid var(--ink)}
+    .toc h2{font-size:24px;font-weight:400;margin-bottom:25px;color:var(--ink)}
+    .toc ol{list-style-position:inside;font-size:16px}
+    .toc li{margin:12px 0;cursor:pointer;transition:all .2s ease}
+    .toc li:hover{margin-left:10px;font-weight:700}
+    .toc a{color:var(--ink);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
 
-    .section { margin-bottom: 60px; padding: 40px 0; border-bottom: 1px solid #e0e0e0; scroll-margin-top: 16px; }
-    .section:last-child { border-bottom: none; }
+    .section{margin-bottom:60px;padding:40px 0;border-bottom:1px solid #e0e0e0;scroll-margin-top:16px}
+    .section:last-child{border-bottom:none}
+    .section-header{margin-bottom:30px;cursor:pointer;user-select:none;display:flex;justify-content:space-between;align-items:center;padding:15px;background:#f8f8f8;border:1px solid #e0e0e0;transition:all .3s ease}
+    .section-header:hover{background:#f0f0f0}
+    .section-title{font-size:clamp(20px,3.2vw,28px);font-weight:400;color:var(--ink);margin-bottom:0}
+    .toggle-icon{font-size:24px;color:#666;transition:transform .3s ease;min-width:30px;text-align:center}
+    .toggle-icon.open{transform:rotate(0deg)}
+    .toggle-icon.closed{transform:rotate(-90deg)}
 
-    .section-header { margin-bottom: 30px; cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #f8f8f8; border: 1px solid #e0e0e0; transition: all .3s ease; }
-    .section-header:hover { background: #f0f0f0; }
-    .section-title { font-size: clamp(20px, 3.2vw, 28px); font-weight: 400; color: var(--ink); margin-bottom: 0; }
-    .toggle-icon { font-size: 24px; color: #666; transition: transform .3s ease; min-width: 30px; text-align: center; }
-    .toggle-icon.open { transform: rotate(0deg); }
-    .toggle-icon.closed { transform: rotate(-90deg); }
+    .section-content{font-size:16px;color:#333;max-height:5000px;overflow:hidden;transition:max-height .3s ease,opacity .3s ease;opacity:1}
+    .section-content.hidden{max-height:0;opacity:0;overflow:hidden}
+    .section-content h3,.section-content h4{font-weight:400;margin:25px 0 15px;color:var(--ink)}
+    .section-content h3{font-size:22px}
+    .section-content h4{font-size:18px}
+    .section-content p{margin:15px 0;text-align:justify}
+    .section-content ul{margin:20px 0 20px 40px;list-style-type:disc}
+    .section-content li{margin:10px 0}
 
-    .section-content { font-size: 16px; color: #333; max-height: 5000px; overflow: hidden; transition: max-height .3s ease, opacity .3s ease; opacity: 1; }
-    .section-content.hidden { max-height: 0; opacity: 0; overflow: hidden; }
-    .section-content h3, .section-content h4 { font-weight: 400; margin: 25px 0 15px; color: var(--ink); }
-    .section-content h3 { font-size: 22px; }
-    .section-content h4 { font-size: 18px; }
-    .section-content p { margin: 15px 0; text-align: justify; }
-    .section-content ul { margin: 20px 0 20px 40px; list-style-type: disc; }
-    .section-content li { margin: 10px 0; }
+    .scope-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin:30px 0}
+    .scope-card{padding:25px;border:2px solid var(--ink)}
+    .scope-card h4{font-size:16px;font-weight:700;margin-bottom:15px;text-transform:uppercase;letter-spacing:1px}
+    .scope-card ul{margin:0 0 0 20px}
 
-    .scope-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 30px; margin: 30px 0; }
-    .scope-card { padding: 25px; border: 2px solid var(--ink); }
-    .scope-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-    .scope-card ul { margin: 0 0 0 20px; }
+    .table-wrap{width:100%;overflow-x:auto}
+    .stakeholder-table{width:100%;border-collapse:collapse;margin:30px 0;font-size:14px;min-width:720px}
+    .stakeholder-table th{background:var(--ink);color:#fff;padding:15px;text-align:left;font-weight:400;text-transform:uppercase;font-size:12px;letter-spacing:1px}
+    .stakeholder-table td{padding:15px;border-bottom:1px solid #e0e0e0;vertical-align:top}
+    .stakeholder-table tr:hover{background:#f8f8f8}
 
-    .table-wrap { width: 100%; overflow-x: auto; }
-    .stakeholder-table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 14px; min-width: 720px; }
-    .stakeholder-table th { background: var(--ink); color: #fff; padding: 15px; text-align: left; font-weight: 400; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
-    .stakeholder-table td { padding: 15px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
-    .stakeholder-table tr:hover { background: #f8f8f8; }
+    .status-reports{margin:30px 0}
+    .status-report{background:#f8f8f8;border:2px solid var(--ink);padding:30px;margin-bottom:30px}
+    .report-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:15px;border-bottom:2px solid var(--ink)}
+    .report-header h3{margin:0;font-size:24px;font-weight:400}
+    .report-status{padding:8px 16px;border-radius:4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+    .status-green{background:#4caf50;color:#fff}
+    .status-at-risk{background:#ff9800;color:#fff}
+    .report-content h4{font-size:16px;font-weight:700;margin-top:20px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;color:var(--ink)}
+    .report-content ul{margin:10px 0 20px 20px}
+    .report-content p{margin:10px 0}
 
-    .status-reports { margin: 30px 0; }
-    .status-report { background: #f8f8f8; border: 2px solid var(--ink); padding: 30px; margin-bottom: 30px; }
-    .report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid var(--ink); }
-    .report-header h3 { margin: 0; font-size: 24px; font-weight: 400; }
-    .report-status { padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    .status-green { background: #4caf50; color: #fff; }
-    .status-at-risk { background: #ff9800; color: #fff; }
-    .report-content h4 { font-size: 16px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); }
-    .report-content ul { margin: 10px 0 20px 20px; }
-    .report-content p { margin: 10px 0; }
+    .milestone-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+    .milestone-table th{background:#e0e0e0;padding:10px;text-align:left;font-weight:700;border-bottom:2px solid var(--ink)}
+    .milestone-table td{padding:10px;border-bottom:1px solid #e0e0e0}
 
-    .milestone-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-    .milestone-table th { background: #e0e0e0; padding: 10px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--ink); }
-    .milestone-table td { padding: 10px; border-bottom: 1px solid #e0e0e0; }
+    .image-container{margin:40px 0;text-align:center}
+    .image-container img{max-width:100%;height:auto;border:1px solid #e0e0e0;margin:20px 0}
 
-    .image-container { margin: 40px 0; text-align: center; }
-    .image-container img { max-width: 100%; height: auto; border: 1px solid #e0e0e0; margin: 20px 0; }
+    .task-image-pair{display:flex;gap:30px;align-items:flex-start;margin:40px 0}
+    .completion-box{flex-shrink:0;width:280px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:25px;box-shadow:0 10px 30px rgba(102,126,234,.3);position:relative;overflow:hidden}
+    .completion-box::before{content:"✓";position:absolute;top:-20px;right:-20px;font-size:120px;color:rgba(255,255,255,.1);font-weight:bold}
+    .completion-box h4{color:#fff;font-size:18px;font-weight:700;margin:0 0 20px;text-transform:uppercase;letter-spacing:2px;position:relative;z-index:1}
+    .completion-box ul{list-style:none;margin:0;padding:0;position:relative;z-index:1}
+    .completion-box li{color:#fff;margin:12px 0;padding-left:30px;position:relative;font-size:14px;line-height:1.6}
+    .completion-box li::before{content:"✓";position:absolute;left:0;font-size:18px;font-weight:bold;color:#4caf50}
+    .task-image-pair img{flex:1;max-width:calc(100% - 310px);height:auto;border:1px solid #e0e0e0}
 
-    .task-image-pair { display: flex; gap: 30px; align-items: flex-start; margin: 40px 0; }
-    .completion-box { flex-shrink: 0; width: 280px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 25px; box-shadow: 0 10px 30px rgba(102,126,234,.3); position: relative; overflow: hidden; }
-    .completion-box::before { content: "✓"; position: absolute; top: -20px; right: -20px; font-size: 120px; color: rgba(255,255,255,.1); font-weight: bold; }
-    .completion-box h4 { color: #fff; font-size: 18px; font-weight: 700; margin: 0 0 20px; text-transform: uppercase; letter-spacing: 2px; position: relative; z-index: 1; }
-    .completion-box ul { list-style: none; margin: 0; padding: 0; position: relative; z-index: 1; }
-    .completion-box li { color: #fff; margin: 12px 0; padding-left: 30px; position: relative; font-size: 14px; line-height: 1.6; }
-    .completion-box li::before { content: "✓"; position: absolute; left: 0; font-size: 18px; font-weight: bold; color: #4caf50; }
-    .task-image-pair img { flex: 1; max-width: calc(100% - 310px); height: auto; border: 1px solid #e0e0e0; }
+    .back-to-top{position:fixed;bottom:30px;right:30px;background:var(--ink);color:#fff;padding:15px 20px;border:none;cursor:pointer;font-size:14px;text-transform:uppercase;letter-spacing:1px;transition:all .3s ease;z-index:100}
+    .back-to-top:hover{background:#333}
 
-    .back-to-top { position: fixed; bottom: 30px; right: 30px; background: var(--ink); color: #fff; padding: 15px 20px; border: none; cursor: pointer; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all .3s ease; z-index: 100; }
-    .back-to-top:hover { background: #333; }
+    /* === Added styles for new deliverables pages === */
+    .badge{display:inline-block;padding:4px 10px;border:1px solid var(--ink);font-size:12px;letter-spacing:.5px;text-transform:uppercase}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:16px 0 28px}
+    .kpi{border:2px solid var(--ink);padding:14px;background:#fafafa}
+    .kpi h4{font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 8px}
+    .kpi .value{font-size:24px;font-weight:700}
+    .progress{height:10px;background:#eaeaea;border:1px solid #d2d2d2;position:relative}
+    .progress>span{display:block;height:100%;background:linear-gradient(90deg,#00c853,#b2ff59)}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+    .card{border:2px solid var(--ink);background:#fff;padding:18px}
+    .card h4{margin-top:0;font-size:18px}
+    .meta{font-size:12px;color:#666;margin-top:6px}
+    .doc-list{margin:10px 0 10px 20px}
+    .doc-list li{margin:6px 0}
+    .retro{border-left:4px solid var(--ink);padding:14px 16px;background:#f8f8f8}
+    .ll-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    .ll-table th,.ll-table td{border:1px solid #ddd;padding:10px;text-align:left}
+    .ll-table th{background:#f1f1f1;text-transform:uppercase;letter-spacing:.5px;font-size:12px}
+    .video-link{text-decoration:none}
+    .video-badge{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--ink);padding:8px 12px}
+    .star-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+    .star-card{border:2px solid var(--ink);padding:16px;background:#fff}
+    .star-pill{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid var(--ink);margin-right:6px}
 
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; animation: none !important; }
-      html { scroll-behavior: auto; }
+    @media (prefers-reduced-motion:reduce){
+      *{transition:none!important;animation:none!important}
+      html{scroll-behavior:auto}
     }
-
-    @media print { .back-to-top { display: none; } }
-
-    @media (max-width: 768px) {
-      body { padding: 20px 15px; }
-      .header h1 { font-size: clamp(24px, 7vw, 32px); }
-      .toc { padding: 25px; }
-      .section { padding: 20px 0; }
-      .scope-grid { grid-template-columns: 1fr; }
-      .stakeholder-table { font-size: 12px; }
-      .stakeholder-table th, .stakeholder-table td { padding: 10px; }
-      .task-image-pair { flex-direction: column; }
-      .completion-box { width: 100%; }
-      .task-image-pair img { max-width: 100%; }
+    @media print{.back-to-top{display:none}}
+    @media (max-width:768px){
+      body{padding:20px 15px}
+      .header h1{font-size:clamp(24px,7vw,32px)}
+      .toc{padding:25px}
+      .section{padding:20px 0}
+      .scope-grid{grid-template-columns:1fr}
+      .stakeholder-table{font-size:12px}
+      .stakeholder-table th,.stakeholder-table td{padding:10px}
+      .task-image-pair{flex-direction:column}
+      .completion-box{width:100%}
+      .task-image-pair img{max-width:100%}
     }
   </style>
 </head>
@@ -173,20 +191,26 @@
     <nav class="toc" aria-label="Table of contents">
       <h2>Table of Contents</h2>
       <ol>
-        <li><a href="#section1">Project Title & Description</a></li>
-        <li><a href="#section2">Vision, Mission & Strategy Alignment</a></li>
-        <li><a href="#section3">Business Case & Justification</a></li>
+        <li><a href="#section1">Project Title &amp; Description</a></li>
+        <li><a href="#section2">Vision, Mission &amp; Strategy Alignment</a></li>
+        <li><a href="#section3">Business Case &amp; Justification</a></li>
         <li><a href="#section4">High-Level Scope</a></li>
         <li><a href="#section5">Stakeholder Register</a></li>
         <li><a href="#section6">Methodology Explanation</a></li>
         <li><a href="#section7">Project Tool</a></li>
         <li><a href="#section8">Weekly Status Reports</a></li>
+        <li><a href="#charter">📄 Approved Project Charter</a></li>
+        <li><a href="#status">📊 Project Status</a></li>
+        <li><a href="#closure">📋 Project Closure Documents</a></li>
+        <li><a href="#interviews">🎥 Stakeholder Interviews</a></li>
+        <li><a href="#star">⭐ STAR Stories Collection</a></li>
       </ol>
     </nav>
 
+    <!-- 1 -->
     <section class="section" id="section1">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section1-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
-        <h2 class="section-title">1. Project Title & Description</h2>
+        <h2 class="section-title">1. Project Title &amp; Description</h2>
         <div class="toggle-icon closed">▼</div>
       </div>
       <div class="section-content hidden" id="section1-content">
@@ -195,9 +219,10 @@
       </div>
     </section>
 
+    <!-- 2 -->
     <section class="section" id="section2">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section2-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
-        <h2 class="section-title">2. Vision, Mission & Strategy Alignment</h2>
+        <h2 class="section-title">2. Vision, Mission &amp; Strategy Alignment</h2>
         <div class="toggle-icon closed">▼</div>
       </div>
       <div class="section-content hidden" id="section2-content">
@@ -210,9 +235,10 @@
       </div>
     </section>
 
+    <!-- 3 -->
     <section class="section" id="section3">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section3-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
-        <h2 class="section-title">3. Business Case & Justification</h2>
+        <h2 class="section-title">3. Business Case &amp; Justification</h2>
         <div class="toggle-icon closed">▼</div>
       </div>
       <div class="section-content hidden" id="section3-content">
@@ -225,6 +251,7 @@
       </div>
     </section>
 
+    <!-- 4 -->
     <section class="section" id="section4">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section4-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">4. High-Level Scope</h2>
@@ -235,13 +262,13 @@
           <div class="scope-card">
             <h4>In Scope for Semester Project</h4>
             <ul>
-              <li>Personal Introduction & Background</li>
+              <li>Personal Introduction &amp; Background</li>
               <li>Skills Inventory</li>
               <li>Resume Development</li>
-              <li>Coursework & Certifications</li>
-              <li>Career Goals & Roadmap</li>
+              <li>Coursework &amp; Certifications</li>
+              <li>Career Goals &amp; Roadmap</li>
               <li>Work Samples/Projects Section</li>
-              <li>Reflection & Growth Summary</li>
+              <li>Reflection &amp; Growth Summary</li>
             </ul>
           </div>
           <div class="scope-card">
@@ -268,6 +295,7 @@
       </div>
     </section>
 
+    <!-- 5 -->
     <section class="section" id="section5">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section5-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">5. Stakeholder Register</h2>
@@ -278,77 +306,56 @@
           <table class="stakeholder-table">
             <thead>
               <tr>
-                <th>Stakeholder</th>
-                <th>Category</th>
-                <th>Role/Interest</th>
-                <th>Power</th>
-                <th>Interest</th>
-                <th>Engagement Strategy</th>
+                <th>Stakeholder</th><th>Category</th><th>Role/Interest</th><th>Power</th><th>Interest</th><th>Engagement Strategy</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Potential Employers/Clients</td>
-                <td>External</td>
+                <td>Potential Employers/Clients</td><td>External</td>
                 <td>To quickly find specific examples of your best work, assess your skills, and understand your brand</td>
-                <td>High</td>
-                <td>High</td>
+                <td>High</td><td>High</td>
                 <td>Manage Closely - Ensure the site is user-friendly, showcases relevant projects prominently, and has clear, accessible contact information.</td>
               </tr>
               <tr>
-                <td>The Creator</td>
-                <td>Internal</td>
+                <td>The Creator</td><td>Internal</td>
                 <td>The project owner and primary driver. You need a platform that effectively represents your brand and professional abilities</td>
-                <td>High</td>
-                <td>High</td>
+                <td>High</td><td>High</td>
                 <td>Manage Closely - Define clear objectives for the site. Conduct regular self-reviews and performance tracking.</td>
               </tr>
               <tr>
-                <td>Friends and Family</td>
-                <td>External</td>
+                <td>Friends and Family</td><td>External</td>
                 <td>Personal network that can provide a "sanity check" and initial feedback on the site's design</td>
-                <td>Low</td>
-                <td>High</td>
+                <td>Low</td><td>High</td>
                 <td>Keep Informed - Share updates and ask for general feedback on the look, feel, and clarity of the site.</td>
               </tr>
               <tr>
-                <td>Recruiters/HR Professionals</td>
-                <td>External</td>
+                <td>Recruiters/HR Professionals</td><td>External</td>
                 <td>To efficiently scan your credentials, skills, and experience for potential job fit</td>
-                <td>High</td>
-                <td>Medium</td>
+                <td>High</td><td>Medium</td>
                 <td>Keep Satisfied - Ensure your resume is easily downloadable and that your skills are clearly listed.</td>
               </tr>
               <tr>
-                <td>Mentors/Industry Peers</td>
-                <td>External</td>
+                <td>Mentors/Industry Peers</td><td>External</td>
                 <td>To review your work and provide expert feedback on your projects and overall presentation</td>
-                <td>Medium</td>
-                <td>Medium</td>
+                <td>Medium</td><td>Medium</td>
                 <td>Keep Informed - Send direct links to specific projects for targeted feedback.</td>
               </tr>
               <tr>
-                <td>Website Hosting/Platform</td>
-                <td>Internal</td>
+                <td>Website Hosting/Platform</td><td>Internal</td>
                 <td>The technical foundation of your site. Need to manage costs and technical requirements</td>
-                <td>Medium</td>
-                <td>Low</td>
+                <td>Medium</td><td>Low</td>
                 <td>Keep Satisfied - Research and choose a reliable host or platform that meets your needs.</td>
               </tr>
               <tr>
-                <td>The General Public</td>
-                <td>External</td>
+                <td>The General Public</td><td>External</td>
                 <td>General visitors who may stumble upon your site through search engines or social media</td>
-                <td>Low</td>
-                <td>Low</td>
+                <td>Low</td><td>Low</td>
                 <td>Monitor - Focus on a clean design and clear navigation.</td>
               </tr>
               <tr>
-                <td>Educational Institution/Instructor</td>
-                <td>External</td>
+                <td>Educational Institution/Instructor</td><td>External</td>
                 <td>Assess the quality, completeness, and professionalism of the portfolio as part of course evaluation</td>
-                <td>High</td>
-                <td>Medium</td>
+                <td>High</td><td>Medium</td>
                 <td>Keep Satisfied - Follow assignment requirements closely, submit polished deliverables.</td>
               </tr>
             </tbody>
@@ -362,6 +369,7 @@
       </div>
     </section>
 
+    <!-- 6 -->
     <section class="section" id="section6">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section6-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">6. Methodology Explanation</h2>
@@ -376,6 +384,7 @@
       </div>
     </section>
 
+    <!-- 7 -->
     <section class="section" id="section7">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section7-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">7. Project Tool</h2>
@@ -437,6 +446,7 @@
       </div>
     </section>
 
+    <!-- 8 -->
     <section class="section" id="section8">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section8-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">8. Weekly Status Reports</h2>
@@ -490,9 +500,7 @@
               </ul>
               <h4>Upcoming Milestones:</h4>
               <table class="milestone-table">
-                <thead>
-                  <tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr>
-                </thead>
+                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
                 <tbody>
                   <tr><td>Portfolio</td><td>10/18/2025</td><td>ON TRACK</td></tr>
                   <tr><td>LinkedIn</td><td>10/18/2025</td><td>ON TRACK</td></tr>
@@ -528,9 +536,7 @@
               </ul>
               <h4>Upcoming Milestones:</h4>
               <table class="milestone-table">
-                <thead>
-                  <tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr>
-                </thead>
+                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
                 <tbody>
                   <tr><td>Portfolio</td><td>10/24/2025</td><td>ON TRACK</td></tr>
                   <tr><td>Job Tracker</td><td>10/24/2025</td><td>AT RISK</td></tr>
@@ -569,9 +575,7 @@
               </ul>
               <h4>Upcoming Milestones:</h4>
               <table class="milestone-table">
-                <thead>
-                  <tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr>
-                </thead>
+                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
                 <tbody>
                   <tr><td>Create &amp; Design</td><td>11/1/2025</td><td>ON TRACK</td></tr>
                   <tr><td>Job Tracker</td><td>11/1/2025</td><td>ON TRACK</td></tr>
@@ -587,12 +591,178 @@
         </div>
       </div>
     </section>
+
+    <!-- 9) Approved Project Charter -->
+    <section class="section" id="charter">
+      <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="charter-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
+        <h2 class="section-title">9. 📄 Approved Project Charter</h2>
+        <div class="toggle-icon closed">▼</div>
+      </div>
+      <div class="section-content hidden" id="charter-content">
+        <p class="meta">Include the officially approved charter PDF or Google Doc. If hosted, link it below.</p>
+        <ul class="doc-list">
+          <li><a href="docs/Approved_Project_Charter.pdf" target="_blank" rel="noopener">Download: Approved_Project_Charter.pdf</a></li>
+        </ul>
+        <div class="kpi-grid">
+          <div class="kpi"><h4>Project Name</h4><div class="value">Breaking Into Tech</div></div>
+          <div class="kpi"><h4>Sponsor</h4><div class="value">Maria Espinoza</div></div>
+          <div class="kpi"><h4>Start / Target Close</h4><div class="value">Sep 2025 → Dec 2025</div></div>
+          <div class="kpi"><h4>Budget</h4><div class="value">$— (Student Project)</div></div>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h4>Scope</h4><p>Portfolio creation, job search readiness, entry-level IT certification, and networking artifacts.</p></div>
+          <div class="card"><h4>Objectives</h4><ul><li>Create a professional portfolio</li><li>Apply to N positions</li><li>Earn entry-level certification</li></ul></div>
+          <div class="card"><h4>Key Stakeholders</h4><p>Student, Instructor, Mentors, Recruiters, Employers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10) Project Status Page -->
+    <section class="section" id="status">
+      <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="status-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
+        <h2 class="section-title">10. 📊 Project Status</h2>
+        <div class="toggle-icon closed">▼</div>
+      </div>
+      <div class="section-content hidden" id="status-content">
+        <div class="kpi-grid">
+          <div class="kpi"><h4>Overall Health</h4><div class="value">On Track</div><span class="badge">Green</span></div>
+          <div class="kpi"><h4>Completion</h4><div class="value">72%</div><div class="progress" aria-label="overall progress"><span style="width:72%"></span></div></div>
+          <div class="kpi"><h4>Tasks Done</h4><div class="value">36/50</div></div>
+          <div class="kpi"><h4>Risks Open</h4><div class="value">1</div></div>
+        </div>
+        <h4>Key Milestones Achieved</h4>
+        <table class="milestone-table">
+          <thead><tr><th>Milestone</th><th>Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Portfolio v1</td><td>10/24/2025</td><td>Done</td></tr>
+            <tr><td>LinkedIn refresh</td><td>10/24/2025</td><td>Done</td></tr>
+            <tr><td>Job Tracker setup</td><td>—</td><td>In Progress</td></tr>
+          </tbody>
+        </table>
+        <p class="meta">This page summarizes current status; weekly details remain in Section 8.</p>
+      </div>
+    </section>
+
+    <!-- 11) Project Closure Documents -->
+    <section class="section" id="closure">
+      <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="closure-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
+        <h2 class="section-title">11. 📋 Project Closure Documents</h2>
+        <div class="toggle-icon closed">▼</div>
+      </div>
+      <div class="section-content hidden" id="closure-content">
+        <h3>Closure Type Analysis</h3>
+        <p>Proposed closure type: <strong>Normal</strong> (objectives substantially met). Rationale: core deliverables completed; remaining items transitioned to personal backlog.</p>
+
+        <h3>Lessons Learned Grid</h3>
+        <table class="ll-table">
+          <thead><tr><th>#</th><th>What Happened</th><th>Lesson</th><th>Action for Future</th><th>Owner</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Late start on job tracker</td><td>Front-load admin tasks</td><td>Set tracker by Week 1</td><td>Angel</td></tr>
+            <tr><td>2</td><td>Over-scoped UI ideas</td><td>Timebox design spikes</td><td>2× 60-min design sprints</td><td>Angel</td></tr>
+            <tr><td>3</td><td>Certification study drift</td><td>Ritualize study blocks</td><td>Pomodoro 4×/wk</td><td>Angel</td></tr>
+            <tr><td>4</td><td>Feedback loops slow</td><td>Schedule reviews early</td><td>Weekly mentor check-ins</td><td>Angel</td></tr>
+            <tr><td>5</td><td>Interview scheduling</td><td>Buffer for reschedules</td><td>Hold 2 backup slots</td><td>Angel</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Project Retrospective</h3>
+        <div class="retro">
+          <p><strong>Went Well:</strong> Portfolio cadence, LinkedIn refresh, consistent weekly reporting.</p>
+          <p><strong>To Improve:</strong> Earlier risk surfacing, commit smaller batch sizes.</p>
+          <p><strong>Experiments:</strong> Timeboxed UI sprints; accountability partner for certification practice.</p>
+        </div>
+        <ul class="doc-list">
+          <li><a href="docs/Closure_Report.pdf" target="_blank" rel="noopener">Closure Report (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 12) Stakeholder Interviews Page -->
+    <section class="section" id="interviews">
+      <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="interviews-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
+        <h2 class="section-title">12. 🎥 Stakeholder Interviews</h2>
+        <div class="toggle-icon closed">▼</div>
+      </div>
+      <div class="section-content hidden" id="interviews-content">
+        <div class="card-grid">
+          <div class="card">
+            <h4>Interview #1 — Hiring Manager</h4>
+            <p>Summary: insights on entry-level expectations, resume keywords, and portfolio storytelling.</p>
+            <p class="meta"><a class="video-link" href="#" target="_blank" rel="noopener"><span class="video-badge">▶ Video (if permitted)</span></a></p>
+          </div>
+          <div class="card">
+            <h4>Interview #2 — IT Support Lead</h4>
+            <p>Summary: ticket triage strategies, common tools, and certification value.</p>
+            <p class="meta"><a class="video-link" href="#" target="_blank" rel="noopener"><span class="video-badge">▶ Video (if permitted)</span></a></p>
+          </div>
+          <div class="card">
+            <h4>Interview #3 — Career Services</h4>
+            <p>Summary: networking plans, referral tactics, and STAR story feedback.</p>
+            <p class="meta"><a class="video-link" href="#" target="_blank" rel="noopener"><span class="video-badge">▶ Video (if permitted)</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13) STAR Stories Collection -->
+    <section class="section" id="star">
+      <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="star-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
+        <h2 class="section-title">13. ⭐ STAR Stories Collection</h2>
+        <div class="toggle-icon closed">▼</div>
+      </div>
+      <div class="section-content hidden" id="star-content">
+        <p class="meta">Five required stories: 2 from presentations, 3 from PMI Principle prompts. Optionally add 1 risk/issue story (does not count toward 5).</p>
+        <div class="star-grid">
+          <div class="star-card">
+            <div class="star-pill">Presentation</div>
+            <h4>STAR #1 — Title</h4>
+            <p><strong>Situation:</strong> …</p>
+            <p><strong>Task:</strong> …</p>
+            <p><strong>Action:</strong> …</p>
+            <p><strong>Result:</strong> …</p>
+          </div>
+          <div class="star-card">
+            <div class="star-pill">Presentation</div>
+            <h4>STAR #2 — Title</h4>
+            <p><strong>Situation:</strong> …</p>
+            <p><strong>Task:</strong> …</p>
+            <p><strong>Action:</strong> …</p>
+            <p><strong>Result:</strong> …</p>
+          </div>
+          <div class="star-card">
+            <div class="star-pill">PMI Principle</div>
+            <h4>STAR #3 — Title</h4>
+            <p><strong>Situation:</strong> …</p>
+            <p><strong>Task:</strong> …</p>
+            <p><strong>Action:</strong> …</p>
+            <p><strong>Result:</strong> …</p>
+          </div>
+          <div class="star-card">
+            <div class="star-pill">PMI Principle</div>
+            <h4>STAR #4 — Title</h4>
+            <p><strong>Situation:</strong> …</p>
+            <p><strong>Task:</strong> …</p>
+            <p><strong>Action:</strong> …</p>
+            <p><strong>Result:</strong> …</p>
+          </div>
+          <div class="star-card">
+            <div class="star-pill">PMI Principle</div>
+            <h4>STAR #5 — Title</h4>
+            <p><strong>Situation:</strong> …</p>
+            <p><strong>Task:</strong> …</p>
+            <p><strong>Action:</strong> …</p>
+            <p><strong>Result:</strong> …</p>
+          </div>
+        </div>
+        <p class="meta">Optional: <span class="star-pill">Risk/Issue</span> story may be added as a sixth card.</p>
+      </div>
+    </section>
   </div>
 
   <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑ Top</button>
 
   <script>
-    function toggleSection(header) {
+    function toggleSection(header){
       const content = header.nextElementSibling;
       const icon = header.querySelector('.toggle-icon');
       const expanded = header.getAttribute('aria-expanded') === 'true';
