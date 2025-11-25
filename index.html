@@ -148,6 +148,13 @@
     .star-arrow.open{transform:rotate(180deg)}
     .star-story-content{margin-top:16px;padding-top:16px;border-top:1px solid #e0e0e0}
 
+    /* iframe for weekly reports */
+    .embedded-report-frame{
+      width:100%;
+      border:none;
+      min-height:900px;
+    }
+
     @media (prefers-reduced-motion:reduce){
       *{transition:none!important;animation:none!important}
       html{scroll-behavior:auto}
@@ -471,206 +478,25 @@
       </div>
     </section>
 
-    <!-- 8 -->
+    <!-- 8 — now loads weekreports.html -->
     <section class="section" id="section8">
-      <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="section8-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
+      <div class="section-header"
+           role="button"
+           tabindex="0"
+           aria-expanded="false"
+           aria-controls="section8-content"
+           onclick="toggleSection(this)"
+           onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">8. Weekly Status Reports</h2>
         <div class="toggle-icon closed">▼</div>
       </div>
       <div class="section-content hidden" id="section8-content">
-        <div class="status-reports">
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 7 - Oct 3rd 2025</h3>
-              <span class="report-status status-green">On Track</span>
-            </div>
-            <div class="report-content">
-              <h4>Accomplishments This Week:</h4>
-              <ul>
-                <li>Completed project charter initial draft</li>
-                <li>Identified key stakeholders</li>
-                <li>Selected Microsoft Planner as project management tool</li>
-              </ul>
-              <h4>Work Planned for Next Week:</h4>
-              <ul>
-                <li>Finalize High-Level Scope section</li>
-                <li>Build initial Stakeholder Register</li>
-              </ul>
-              <h4>Issues/Blockers:</h4>
-              <ul><li>None at this time</li></ul>
-              <h4>Charter Updates:</h4>
-              <p>Initial charter created with all required sections.</p>
-            </div>
-          </article>
-
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 9 - Oct 19th 2025</h3>
-              <span class="report-status status-at-risk">At Risk</span>
-            </div>
-            <div class="report-content">
-              <h4>Executive Summary:</h4>
-              <p>The project status is going steadily, but more progress needs to be made. This past week was more loaded than prior workloads, with two other separate school projects requiring immediate attention. After viewing this upcoming week's schedule I should have time to make this class project the priority.</p>
-              <h4>Accomplishments This Week:</h4>
-              <ul>
-                <li>Implemented Web Format</li>
-                <li>Got a peer review on LinkedIn</li>
-                <li>Received Certificate</li>
-              </ul>
-              <h4>Work Planned for Next Week:</h4>
-              <ul>
-                <li>Job Submission</li>
-                <li>Request LinkedIn reviews</li>
-                <li>Finish Team Project</li>
-              </ul>
-              <h4>Upcoming Milestones:</h4>
-              <table class="milestone-table">
-                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
-                <tbody>
-                  <tr><td>Portfolio</td><td>10/18/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>LinkedIn</td><td>10/18/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>Job Tracker</td><td>10/18/2025</td><td>ON TRACK</td></tr>
-                </tbody>
-              </table>
-              <h4>Issues &amp; Risks / Mitigations:</h4>
-              <p>No issues or risks identified for this reporting period.</p>
-              <h4>Changes Since Last Report:</h4>
-              <p>No changes occurred since the last reporting period.</p>
-            </div>
-          </article>
-
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 10 - Oct 25th 2025</h3>
-              <span class="report-status status-green">On Track</span>
-            </div>
-            <div class="report-content">
-              <h4>Executive Summary:</h4>
-              <p>The project is back on track, with the website portion making strides in its design. I gamified the use of Claude ai, by only working on the web building of the project to the point where Claude will not allow the user to proceed until a specified time. I now look forward to those set times where I then crank-out as much productivity as possible to the UI.</p>
-              <h4>Accomplishments This Week:</h4>
-              <ul>
-                <li>Website</li>
-                <li>Linkedin</li>
-                <li>Discipline</li>
-              </ul>
-              <h4>Work Planned for Next Week:</h4>
-              <ul>
-                <li>Linkedin feedback</li>
-                <li>Design &amp; UI</li>
-                <li>Project Planner</li>
-              </ul>
-              <h4>Upcoming Milestones:</h4>
-              <table class="milestone-table">
-                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
-                <tbody>
-                  <tr><td>Portfolio</td><td>10/24/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>Job Tracker</td><td>10/24/2025</td><td>AT RISK</td></tr>
-                  <tr><td>Linkedin</td><td>10/24/2025</td><td>ON TRACK</td></tr>
-                </tbody>
-              </table>
-              <h4>Issues &amp; Risks / Mitigations:</h4>
-              <p><strong>Job Tracker</strong> — <em>MEDIUM</em><br />Mitigation: I need to start looking into reaching out to companies.</p>
-              <h4>Changes Since Last Report:</h4>
-              <p><strong>Change #1</strong><br />
-                <strong>Date:</strong> 2025-10-25<br />
-                <strong>Description:</strong> The web building portion of the project was falling seriously behind.<br />
-                <strong>Reason / Impact if not made:</strong> We are not back on track, after checking-in with instructor, Maria Espinoza.</p>
-            </div>
-          </article>
-
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 11 - Nov 2nd 2025</h3>
-              <span class="report-status status-green">On Track</span>
-            </div>
-            <div class="report-content">
-              <h4>Executive Summary:</h4>
-              <p>All is well in the world of this projects health. I'm getting people outside of campus in agreeing to recorded interview, although they have yet to be conducted. The job search is slow but moving.</p>
-              <h4>Accomplishments This Week:</h4>
-              <ul>
-                <li>Began job search</li>
-                <li>Team Charter created</li>
-                <li>Portfolio progression</li>
-              </ul>
-              <h4>Plan for Next Week:</h4>
-              <ul>
-                <li>Portfolio web design</li>
-                <li>Continue job hunt</li>
-                <li>Team Meeting</li>
-              </ul>
-              <h4>Upcoming Milestones:</h4>
-              <table class="milestone-table">
-                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
-                <tbody>
-                  <tr><td>Create &amp; Design</td><td>11/1/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>Job Tracker</td><td>11/1/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>LinkedIn &amp; Networking</td><td>11/1/2025</td><td>ON TRACK</td></tr>
-                </tbody>
-              </table>
-              <h4>Issues &amp; Risks / Mitigations:</h4>
-              <p>No issues or risks identified for this reporting period.</p>
-              <h4>Changes Since Last Report:</h4>
-              <p>No changes occurred since the last reporting period.</p>
-            </div>
-          </article>
-
-          <!-- Week 12 -->
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 12 - Nov 11th 2025</h3>
-              <span class="report-status status-green">On Track</span>
-            </div>
-            <div class="report-content">
-              <h4>Executive Summary:</h4>
-              <p>All is well with the project health. Completion is approximately seventy-two percent with two final deliverables remaining.</p>
-
-              <h4>Accomplishments This Week:</h4>
-              <ul>
-                <li>LinkedIn</li>
-                <li>Networking</li>
-                <li>Team Charter</li>
-              </ul>
-
-              <h4>Plan for Next Week:</h4>
-              <ul>
-                <li>Add remaining web building designs</li>
-                <li>Submit more applications congruent to the tech field</li>
-                <li>Conduct interviews with respondents</li>
-              </ul>
-
-              <h4>Upcoming Milestones:</h4>
-              <table class="milestone-table">
-                <thead><tr><th>Milestone</th><th>Target Date</th><th>Status</th></tr></thead>
-                <tbody>
-                  <tr><td>Portfolio</td><td>11/10/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>Job Tracker</td><td>11/10/2025</td><td>ON TRACK</td></tr>
-                  <tr><td>LinkedIn</td><td>11/10/2025</td><td>ON TRACK</td></tr>
-                </tbody>
-              </table>
-
-              <h4>Issues &amp; Risks / Mitigations:</h4>
-              <p>No issues or risks identified for this reporting period.</p>
-
-              <h4>Changes Since Last Report:</h4>
-              <p>No changes occurred since the last reporting period.</p>
-            </div>
-          </article>
-
-          <!-- Week 13 empty box -->
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 13</h3>
-            </div>
-          </article>
-
-          <!-- Week 14 empty box -->
-          <article class="status-report">
-            <div class="report-header">
-              <h3>Week 14</h3>
-            </div>
-          </article>
-
-        </div>
+        <iframe
+          src="weekreports.html"
+          title="Weekly Status Reports"
+          class="embedded-report-frame"
+          loading="lazy">
+        </iframe>
       </div>
     </section>
 
