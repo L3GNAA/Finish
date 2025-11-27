@@ -148,7 +148,7 @@
     .star-arrow.open{transform:rotate(180deg)}
     .star-story-content{margin-top:16px;padding-top:16px;border-top:1px solid #e0e0e0}
 
-    /* iframe for weekly reports */
+    /* iframe for weekly reports / interviews */
     .embedded-report-frame{
       width:100%;
       border:none;
@@ -870,30 +870,19 @@
       </div>
     </section>
 
-    <!-- 11) Stakeholder Interviews Page -->
+    <!-- 11) Stakeholder Interviews Page — now loads interviews.html -->
     <section class="section" id="interviews">
       <div class="section-header" role="button" tabindex="0" aria-expanded="false" aria-controls="interviews-content" onclick="toggleSection(this)" onkeypress="if(event.key==='Enter'||event.key===' ') toggleSection(this)">
         <h2 class="section-title">11. 🎥 Stakeholder Interviews</h2>
         <div class="toggle-icon closed">▼</div>
       </div>
       <div class="section-content hidden" id="interviews-content">
-        <div class="card-grid">
-          <div class="card">
-            <h4>Interview #1 — Hiring Manager</h4>
-            <p>Summary: insights on entry-level expectations, resume keywords, and portfolio storytelling.</p>
-            <p class="meta"><a class="video-link" href="#" target="_blank" rel="noopener"><span class="video-badge">▶ Video (if permitted)</span></a></p>
-          </div>
-          <div class="card">
-            <h4>Interview #2 — IT Support Lead</h4>
-            <p>Summary: ticket triage strategies, common tools, and certification value.</p>
-            <p class="meta"><a class="video-link" href="#" target="_blank" rel="noopener"><span class="video-badge">▶ Video (if permitted)</span></a></p>
-          </div>
-          <div class="card">
-            <h4>Interview #3 — Career Services</h4>
-            <p>Summary: networking plans, referral tactics, and STAR story feedback.</p>
-            <p class="meta"><a class="video-link" href="#" target="_blank" rel="noopener"><span class="video-badge">▶ Video (if permitted)</span></a></p>
-          </div>
-        </div>
+        <iframe
+          src="interviews.html"
+          title="Stakeholder Interviews"
+          class="embedded-report-frame"
+          loading="lazy">
+        </iframe>
       </div>
     </section>
 
